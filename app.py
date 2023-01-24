@@ -63,10 +63,7 @@ for line in data:
     if line.split("=")[0] == "emailPassword":
         emailPassword=line.split("=")[1].strip()    
 
-print(emailUserName)
-print(emailPassword)
-print(swimmingID)
-print(strengthID)
+
 try:
     imapSession = imaplib.IMAP4_SSL('imap.gmail.com')
     typ, accountDetails = imapSession.login(emailUserName, emailPassword)
