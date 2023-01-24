@@ -77,8 +77,8 @@ try:
     
     imapSession.select('"[Gmail]/Sent Mail"')
 
-#    dateTime = '(SINCE "{today}")'.format(today=date.today().strftime("%d-%b-%Y"))
-    dateTime = '(SINCE "22-JAN-2023")' 
+    dateTime = '(SINCE "{today}")'.format(today=date.today().strftime("%d-%b-%Y"))
+   # dateTime = '(SINCE "22-JAN-2023")' 
     result, data = imapSession.uid('search', None, dateTime ) 
     #print ("hi")
     if typ != 'OK':
